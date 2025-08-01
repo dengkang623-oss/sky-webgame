@@ -5,9 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>天空网页游戏</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    #controls {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+    }
+    .btn {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 24px;
+      margin: 5px;
+      padding: 15px 25px;
+      border-radius: 10px;
+      border: none;
+    }
+  </style>
 </head>
 <body>
   <canvas id="gameCanvas"></canvas>
+  
+  <div id="controls">
+    <button class="btn" ontouchstart="keys['ArrowLeft']=true" ontouchend="keys['ArrowLeft']=false">←</button>
+    <button class="btn" ontouchstart="keys['Space']=true" ontouchend="keys['Space']=false">跳</button>
+    <button class="btn" ontouchstart="keys['ArrowRight']=true" ontouchend="keys['ArrowRight']=false">→</button>
+  </div>
+
   <script src="game.js"></script>
 </body>
 </html>
